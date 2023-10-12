@@ -108,8 +108,8 @@
 
 ### document オブジェクト
 
-document.querySelector()　()内の要素を取得する
-document.createElement() ()ないの要素を作成する
+document.querySelector()　()内の要素を取得する<br>
+document.createElement() ()内の要素を作成する
 
 ```js
  // リストにメロンを加えたい

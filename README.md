@@ -106,6 +106,31 @@
 
 ```
 
+### document オブジェクト
+
+document.querySelector()　()内の要素を取得する
+document.createElement() ()ないの要素を作成する
+
+```js
+ // リストにメロンを加えたい
+        // ul要素を取り入れる
+        const element = document.querySelector("ul");
+        console.log(element);
+
+        // selectorはcssのセレクターなので
+        const element2 = document.querySelector("#fruitslist");
+        console.log(element2);
+
+        const element3 = document.querySelector(".listbox__list");
+        console.log(element3);
+
+        // 新しい要素を作る
+        const lilast = document.createElement("ul");
+        console.dir(lilast);
+
+        lilast.textContent = "メロン";
+        console.log(lilast);
+```
 
 
 ## 10 月 5 日

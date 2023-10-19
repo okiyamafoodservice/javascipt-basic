@@ -9,18 +9,33 @@
 
 <body>
     <h1>人気フルーツ一覧</h1>
-    <ul id="fruitslist" class="listbox__list"></ul>
+    <ul id="fruitslist" class="listbox__list">
+
+
+    </ul>
 
 
 
     <script>
-        // 宣言、代入
-        const animals = ["dog", "cat", "bird"];
-        console.log(animals);
-        // ２番目を取得
-        console.log(animals[1]);
-        // 長さを取得
-        console.log(animals.length);
+        //    ulの中に果物一案を一度でliに入れたい
+        // 配列fruitを宣言、代入
+        const fruits = ["桃", "いちご", "ぶどう"];
+
+        // いちごを取得
+
+
+        const element = document.querySelector("#fruitslist");
+
+        // fruitsの要素数分だけforで回転させる
+        for (let i = 0; i < fruits.length; i++) {
+
+            const lilast = document.createElement("li");
+            // liに値（果物-配列を代入
+
+            lilast.textContent = fruits[i];
+
+            element.appendChild(lilast);
+        }
 
 
 

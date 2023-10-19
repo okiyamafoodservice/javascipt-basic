@@ -6,6 +6,82 @@
 1. 10月5日（木曜日）はじめの一歩
 2. 10月5日（木曜日）GitHubリポジトリ作成
 3. 10月12日 (木曜日)　代入と複合演算子
+4. 10月19日(木曜日)配列とfor文
+
+## 10月19日
+- 配列とfor文
+```js
+// 配列
+        // リストにメロンを加えたい
+        // ul要素を取り入れる
+        const element = document.querySelector("ul");
+        console.log(element);
+
+        // selectorはcssのセレクターなので
+        const element2 = document.querySelector("#fruitslist");
+        console.log(element2);
+
+        const element3 = document.querySelector(".listbox__list");
+        console.log(element3);
+
+        // 新しい要素を作る
+        const lilast = document.createElement("li");
+        console.dir(lilast);
+
+        lilast.textContent = "メロン";
+        console.log(lilast);
+
+
+        // リストの最後に追加する。<li>メロン</li>を変数elementないの<ul></ul>に追加する
+
+        element.appendChild(lilast);
+
+        // いちごを追加したい
+
+        const lilast2 = document.createElement("li");
+        lilast2.textContent = "いちご";
+        element.appendChild(lilast2);
+
+// for文
+// 基本系
+  for (let i = 0; i < 4; i++) {
+            // 繰り返しの処理
+            // ０〜3を表示したい
+            console.log(i);
+        }
+// 7の段
+          for (let i = 0; i < 9; i++) {
+            console.log(((i + 1) * 7));
+        }
+
+        for (let i = 0; i < 9; i++) {
+            console.log("7" + "×" + (i + 1) + "=" + ((i + 1) * 7));
+        }
+
+        // テンプレートリテラル
+        for (let i = 0; i < 9; i++) {
+            console.log(`7×${i + 1}=${7 * (i + 1)}`);
+        }
+
+        for文を用いてリストを追加
+// ul class =boxFooterLink
+        const element =document.querySelector(".boxFooterLink");
+// menusという配列を設定
+const menus =["カリキュラム","就職実績"]
+// menusの配列数内でループ
+for(let i=0;i<menus.length;i++){
+        // elementlistという名前のliを作成
+    const elementlist =document.createElement("li");
+//elementlitsをmenuという配列に設定
+    elementlist.textContent=menus[i];
+//     element(boxFooterLink)内の子要素にelementlistを追加
+    element.appendChild(elementlist);
+}
+
+
+
+
+```
 
 ## 10月12日
 - リテラルと演算子

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <dl class="recipe">
+        <dt>カップヌードルの作り方</dt>
+        <dd>フタを途中まで開ける</dd>
+        <dd>お湯を線まで入れてフタをする</dd>
+    </dl>
+
+
+    <script>
+
+        // dl要素をelementとして定義
+        const element = document.querySelector("dl");
+
+        // dt要素をelement2として定義(今回は使わない)
+        const element2 = document.querySelector("dt");
+
+        // dd要素をelement3として定義（今回は使わない）
+
+        const element3 = document.querySelector("dd");
+
+        // dd要素を新しく作成し、newddという名前で定義
+        const newdd = document.createElement("dd");
+
+        // newddに「3分待って出来上がり」というテキストを追加
+        newdd.textContent = "3分待ってできあがり";
+
+        // newddをelementに追加
+        element.appendChild(newdd);
+
+
+    </script>
+</body>
+
+</html>

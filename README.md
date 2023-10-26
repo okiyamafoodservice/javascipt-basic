@@ -7,6 +7,39 @@
 2. 10月5日（木曜日）GitHubリポジトリ作成
 3. 10月12日 (木曜日)　代入と複合演算子
 4. 10月19日(木曜日)配列とfor文
+5. 10月26日（木曜日）ID取得と要素の追加
+
+## 10月26日
+- ID取得
+```js
+// toparisというID名（getElementByIDのID取得なので#は必要ない)
+  const id_element = document.getElementById("toparis");
+        console.dir(id_element.children[3]);
+// liという要素を取得(getElementByTagName)
+        const tag_element = document.getElementsByTagName("li");
+        console.log(tag_element);
+// pool_bというクラス名を取得　HTML collection
+        const class_name = document.getElementsByClassName("pool_b");
+        console.log(class_name);
+```
+- innerHTMLを用いた要素の追加
+```js
+  // 挿入したい要素の親となる要素
+        const sweetpotatos = document.querySelector(".imo");
+        // 複合代入演算子を用いることで.innerHTMLで要素内に追加できる
+        sweetpotatos.innerHTML += "<li>べにはるか</li>";
+        // さらにテンプレートリテラルを用いることで、複数の要素を挿入できる
+        sweetpotatos.innerHTML += `<li>べにはるか</li><li>シルクスイート</li>`;
+
+      appendChildを用いると
+    //   定数名.appendChild(挿入する定数);
+    const shibacard = document.querySelector(".card1");
+    shibacard.appendChild(pochi);
+
+    const hachikocard = document.querySelector(".card2");
+    hachikocard.appendChild(hachiko);
+
+```
 
 ## 10月19日
 - 配列とfor文

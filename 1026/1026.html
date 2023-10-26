@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button id="btn">ハンドラを起動</button>
+    <button id="nofunc_btn">関数を使わない</button>
+</body>
+
+<script>
+    const btn = document.querySelector("#btn");
+    console.log(btn);
+
+    // 関数を定義
+    function showMessage() {
+        alert('イベントが発生しました');
+    }
+
+    // イベント
+    // 何に何をしたら、どうなる
+    // 「ボタン」に「クリック」をしたら「アラート」が出る
+
+    // ボタンにクリックをしたらshowMessageが起こる
+    btn.addEventListener("click", showMessage);
+
+
+    //関数を使わない
+
+    const nofunc_btn = document.querySelector("#nofunc_btn");
+    nofunc_btn.addEventListener("ckick", function () {
+        alert("関数使わずボタンをクリック");
+    });
+
+
+
+</script>
+
+</html>

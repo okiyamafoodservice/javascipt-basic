@@ -7,7 +7,7 @@
 2. 10月5日（木曜日）GitHubリポジトリ作成
 3. 10月12日 (木曜日)　代入と複合演算子
 4. 10月19日(木曜日)配列とfor文
-5. 10月26日（木曜日）ID取得と要素の追加
+5. 10月26日（木曜日）ID取得と要素の追加 Eventの追加
 
 ## 10月26日
 - ID取得
@@ -40,6 +40,36 @@
     hachikocard.appendChild(hachiko);
 
 ```
+-eventの発生
+```js
+ // 赤色
+        const redBtn = document.querySelector(".red");
+
+        // 文字を取得する
+        const text = document.querySelector(".text");
+        console.dir(text);
+        const textSpan = document.querySelector(".text span")
+
+
+        // redBtnにクリックイベントを設定する
+        redBtn.addEventListener("click", function () {
+            // ディレクトリ内のstyleの中のcolorを変更することで,textの色が変更される
+            text.style.color = "#ff0000";
+            // fontsizeの変更
+            text.style.fontSize = "60px";
+            // textSpan内のtextを変更
+            textSpan.innerText = "赤";
+        });
+
+           //  属性の変更
+        redder.addEventListener("click", function () {
+
+            // 変更する定数名.setAttribute（"属性","再設定するクラス名")
+            text.setAttribute("class", "redText");
+        });
+
+```
+
 
 ## 10月19日
 - 配列とfor文

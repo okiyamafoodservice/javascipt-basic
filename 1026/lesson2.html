@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <style>
+    </style>
+    <p class="text"><span>色の名前</span>色です。</p>
+
+    <button class="red">赤色</button>
+    <button class="blue">⻘色</button>
+    <button class="yellow">⻩色</button>
+
+    <script>
+
+        // 赤色
+        const redBtn = document.querySelector(".red");
+
+        // 文字を取得する
+        const text = document.querySelector(".text");
+        console.dir(text);
+        const textSpan = document.querySelector(".text span")
+
+
+        // redBtnにクリックイベントを設定する
+        redBtn.addEventListener("click", function () {
+            // ディレクトリ内のstyleの中のcolorを変更することで,textの色が変更される
+            text.style.color = "#ff0000";
+            text.style.fontSize = "60px";
+            textSpan.innerText = "赤";
+
+        });
+
+        // 青色
+        const blueBtn = document.querySelector(".blue");
+
+        blueBtn.addEventListener("click", function () {
+            text.style.color = "#006AB6";
+            textSpan.innerText = "青";
+        });
+
+        const yellowBtn = document.querySelector(".yellow");
+
+        yellowBtn.addEventListener("click", function () {
+            text.style.color = "#FFF100";
+            textSpan.innerText = "黄";
+        });
+
+    </script>
+
+</body>
+
+</html>

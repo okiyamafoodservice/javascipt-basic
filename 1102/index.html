@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <p>
+      <span>JavaScript</span
+      >(ジャバスクリプト)とは、プログラミング言語のひとつであ る。
+    </p>
+    <button class="redder">赤くなる</button>
+    <button class="bigger">大きくなる</button>
+    <script>
+      const jsText = document.querySelector("span");
+      const btnRed = document.querySelector(".redder");
+      const btnBig = document.querySelector(".bigger");
+
+      //   btnRed.addEventListener("click", () =>
+      //     jsText.setAttribute("class", "redText")
+      //   );
+
+      //   btnBig.addEventListener("click", () =>
+      //     jsText.setAttribute("class", "bigText")
+      //   );
+
+      //   const body_element = document.querySelector("body");
+      //   let counter = 0;
+
+      //   const color_array = ["pink", "blue", "orange", "green", "tomato"];
+
+      //   body_element.addEventListener("click", function () {
+      //     document.body.style.backgroundColor = color_array[counter];
+      //     counter++;
+      //   });
+
+      btnRed.addEventListener("click", () => {
+        if (btnRed.textContent === "赤くなる") {
+          jsText.classList.toggle("redText");
+          btnRed.textContent = "もとに戻る";
+        } else {
+          jsText.classList.remove("redText");
+          btnRed.textContent = "赤くなる";
+        }
+      });
+
+      btnBig.addEventListener("click", () => {
+        jsText.classList.toggle("bigText");
+        btnBig.textContent = "もとにもどす";
+        jsText.classList.remove("redText");
+      });
+    </script>
+  </body>
+</html>

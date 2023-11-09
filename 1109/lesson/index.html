@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      p {
+        margin-left: 0;
+        opacity: 1;
+        /*1 ここにアニメーションの設定*/
+        transition: all 1s ease-in;
+      }
+      .slide {
+        /*2 ここにデフォルトとの差*/
+        margin-left: 100%;
+        opacity: 0;
+      }
+    </style>
+    <p>フェードアウトしながら、横にスライドする</p>
+  </head>
+  <body>
+    <p>フェードアウトしながら、横にスライドする1</p>
+    <p>フェードアウトしながら、横にスライドする2</p>
+    <p>フェードアウトしながら、横にスライドする3</p>
+    <p>フェードアウトしながら、横にスライドする4</p>
+
+    <script>
+      const text = document.querySelectorAll("p");
+      console.log(text);
+
+      for (let i = 0; i < text.length; i++) {
+        text[i].addEventListener("click", function () {
+          this.classList.toggle("slide");
+        });
+      }
+    </script>
+  </body>
+</html>
+
+<!-- this クリックしたもの（イベントを起こしたもの）がこれに当てはまる -->

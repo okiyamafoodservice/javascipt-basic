@@ -9,6 +9,44 @@
 3. 10 月 12 日 (木曜日)　代入と複合演算子
 4. 10 月 19 日(木曜日)配列と for 文
 5. 10 月 26 日（木曜日）ID 取得と要素の追加 Event の追加
+6. 11 月 09 日（木曜日）if 文
+
+## 11/9
+
+```js
+          const widthsize = window.innerWidth; //現在のブラウザの横幅
+          console.log(widthsize);
+          //以下から記述していきます。
+          const clickArea = document.querySelector(".clickArea");
+
+          const leftZone = document.querySelector(".leftZone");
+          const rightZone = document.querySelector(".rightZone");
+
+          document.body.addEventListener("click", function (event) {
+            console.log(event.clientX);
+
+            if (event.clientX >= widthsize / 2) {
+              const list = document.createElement("li");
+              list.textContent = "右";
+              rightZone.appendChild(list);
+            } else {
+              const list = document.createElement("li");
+              list.textContent = "左";
+              leftZone.appendChild(list);
+            }
+          });
+
+          <!--
+    document.body.insertAdjacentHTML("beforeEnd", "<p>numは100未満</p>");
+
+    beforebegin … 指定した要素のタグの上に挿入
+afterbegin … 指定した要素のタグの中の初めに挿入
+beforeend … 指定した要素のタグの中の最後に挿入
+afterend … 指定した要素のタグの下に挿入 -->
+
+
+
+```
 
 ## 11/2
 

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <html>
+      <head>
+        <style>
+          body {
+            height: 100vh;
+          }
+          .clickArea {
+            display: flex;
+            width: 100%;
+          }
+          .clickArea ol {
+            width: 50%;
+          }
+        </style>
+      </head>
+      <body>
+        <section>
+          <h1>左右どっち？</h1>
+          <div class="clickArea">
+            <ol class="leftZone"></ol>
+            <ol class="rightZone"></ol>
+          </div>
+        </section>
+        <script>
+          const widthsize = window.innerWidth; //現在のブラウザの横幅
+          console.log(widthsize);
+          //以下から記述していきます。
+          const clickArea = document.querySelector(".clickArea");
+
+          const leftZone = document.querySelector(".leftZone");
+          const rightZone = document.querySelector(".rightZone");
+
+          document.body.addEventListener("click", function (event) {
+            console.log(event.clientX);
+
+            if (event.clientX >= widthsize / 2) {
+              const list = document.createElement("li");
+              list.textContent = "右";
+              rightZone.appendChild(list);
+            } else {
+              const list = document.createElement("li");
+              list.textContent = "左";
+              leftZone.appendChild(list);
+            }
+          });
+        </script>
+      </body>
+    </html>
+  </head>
+</html>
+
+r
+
+<!--
+    document.body.insertAdjacentHTML("beforeEnd", "<p>numは100未満</p>");
+
+    beforebegin … 指定した要素のタグの上に挿入
+afterbegin … 指定した要素のタグの中の初めに挿入
+beforeend … 指定した要素のタグの中の最後に挿入
+afterend … 指定した要素のタグの下に挿入 -->

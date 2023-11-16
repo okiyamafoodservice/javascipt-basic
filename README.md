@@ -10,6 +10,51 @@
 4. 10 月 19 日(木曜日)配列と for 文
 5. 10 月 26 日（木曜日）ID 取得と要素の追加 Event の追加
 6. 11 月 09 日（木曜日）if 文
+7. 11 月 16 日（木曜日）演算子
+
+## 11/16
+
+```js
+const word = ["Java", "JavaScript", "Ruby", "Go", "PHP"];
+
+const resultArea = document.querySelector(".result");
+
+const resultBtn = document.querySelector("button");
+
+resultBtn.addEventListener("click", function () {
+  const num = Math.round(Math.random() * 4);
+
+  if (num === 1) {
+    resultArea.textContent = word[num];
+  } else {
+    resultArea.textContent = "違う言語です";
+  }
+});
+
+let n1 = 1;
+let n2 = 2;
+
+// 論理和　AまたはBがtrueの場合
+if (n1 === 1 || n2 === 1) {
+  console.log(true);
+} else {
+  console.log(false);
+}
+
+// 論理積　AかつBがtureの場合
+
+if (n1 === 1 && n2 === 2) {
+  console.log(true);
+} else {
+  console.log(false);
+}
+
+if (n1 === 1 && n2 === 1) {
+  console.log(true);
+} else {
+  console.log(false);
+}
+```
 
 ## 11/9
 

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        width: 1000px;
+        height: 1000px;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      function kuku(num) {
+        for (let i = 1; i <= 9; i++) {
+          console.log(num + "×" + i + "=" + num * i);
+        }
+      }
+
+      kuku(5);
+
+      //   関数の定義
+
+      function showMessage(message) {
+        console.log("メッセージ");
+      }
+
+      //   関数式
+
+      const showMessage2 = function (message) {
+        console.log("メッセージ");
+      };
+
+      //   イベントで関数を使う
+      document.body.addEventListener("click", showMessage());
+
+      document.body.addEventListener("click", function () {
+        showMessage("こんにちは");
+      });
+    </script>
+  </body>
+</html>

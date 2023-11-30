@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+      <li>犬</li>
+      <li>猫</li>
+    </ul>
+    <p class="result"></p>
+
+    <div class="fnArea">aa</div>
+
+    <script>
+      const dog = document.querySelector("li");
+
+      const cat = document.querySelector("li:nth-child(2)");
+      console.log(cat.textContent);
+
+      const result = document.querySelector(".result");
+
+      dog.addEventListener("click", function () {
+        console.log("あなたは犬派です");
+        result.textContent = "あなたは　犬派です";
+      });
+
+      cat.addEventListener("click", function () {
+        console.log("あなたは猫派です");
+        result.textContent = "あなたは　猫派です";
+      });
+
+      console.log(dog, cat);
+
+      //   関数式
+
+      console.log("あなたは、x派です");
+      const animalCheck = function (animal) {
+        result.textContent = "あなたは" + animal + "派です";
+      };
+
+      dog.addEventListener("click", function () {
+        console.dir(this);
+        animalCheck(this.textContent);
+      });
+
+      animalCheck();
+
+      //   引数が(“牛丼”, “並盛”, “つゆだく”, 388)の時、「牛丼の並盛、つゆだくで 388 円」とコンソールに表示される関数 yoshinoya を書いてください
+
+      const yoshinoya = function (menu, amount, side, price) {
+        console.log(menu + "の" + amount + "、" + side + "で" + price + "円");
+      };
+
+      //関数の実行
+      //   複数の引数を読み込む場合は、,で区切る
+      yoshinoya("牛丼", "並盛", "つゆだく", 388); //牛丼の並盛、つゆだくで 388 円
+      yoshinoya("豚丼", "大盛", "たまご", 592); //豚丼の大盛、たまごで 592 円
+
+      //   引数が配列
+
+      const sumCard = function (card) {
+        let total = 0;
+        for (let i = 0; i < card.length; i++) {
+          total += card[i]; //toral = total + card[i]
+        }
+        console.log(total);
+      };
+      const card_list = [1, 2, 3, 4, 5, 6, 7, 8];
+
+      sumCard(card_list); //10
+
+      const member_list = [
+        "チェウォン",
+        "サクラ",
+        "ユンジン",
+        "カズハ",
+        "ウンチェ",
+      ];
+      const mugiwara_list = [
+        "モンキー・D・ルフィ",
+        "ナミ",
+        "ロロノア・ゾロ",
+        "ヴィンスモーク・サンジ",
+        "ウソップ",
+        "トニートニー・チョッパー",
+        "ニコ・ロビン",
+        "フランキー",
+        "ブルック",
+        "ジンベエ",
+      ];
+
+      //   .fnareaに上記の配列の要素を<li>で追加する関数
+
+      const memberArea = document.querySelector(".fnarea");
+
+      const addmember = function (members) {
+        const addarea = docummen.createElement("ul");
+        for (let i = 0; i < members.length; i++) {
+          const memberlist = document.createElement("li");
+          memberlist.textContent = members[i];
+
+          addarea.appendChild(memberlist);
+        }
+
+        document.querySelector(".fnarea").appendChild(addarea);
+      };
+
+      // 関数の実行
+      //   memberPush(member_list);
+      //   memberPush(mugiwara_list);
+    </script>
+  </body>
+</html>

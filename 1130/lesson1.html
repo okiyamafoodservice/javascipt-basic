@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>関数</title>
+  </head>
+  <body>
+    <script>
+      // 関数を定義
+      function aisatsu(message) {
+        console.log("こんにちは");
+      }
+
+      //   関数を実行　関数名+()
+      aisatsu();
+      console.log("1回目の呼び出し");
+      aisatsu();
+      console.log("2回目の呼び出し");
+
+      //   関数の定義を下に書いても、定義は呼び出せる
+      dogname();
+
+      function dogname() {
+        console.log("私の家の犬の名前はポチです");
+      }
+
+      catname();
+
+      function catname() {
+        console.log("私の家の犬の名前はタマです");
+      }
+    </script>
+  </body>
+</html>

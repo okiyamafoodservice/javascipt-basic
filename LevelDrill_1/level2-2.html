@@ -1,47 +1,57 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0"
-    />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>レベル2-querySelectorとquerySelectorAll</title>
-  </head>
-  <body>
-    <h1>朝マック</h1>
-    <ul class="morningmac">
-      <li class="muffin">ソーセージマフィン</li>
-      <li class="muffin">エッグマックマフィン</li>
-      <li class="muffin">ソーセージエッグマフィン</li>
-      <li class="muffin">チキンクリスプマフィン</li>
-      <li class="hotcake">ホットケーキ</li>
-      <li class="griddle">マックグリドルソーセージ</li>
-      <li class="griddle">マックグリドルソーセージエッグ</li>
-      <li class="griddle">マックグリドルベーコンエッグ</li>
-      <li>ベーコンエッグマックサンド</li>
-      <li>フィレオフィッシュ</li>
-    </ul>
-    <script>
-      // 例
-      // ソーセージマフィンをquerySelectorで取得しコンソールで表示
-      const sausage = document.querySelector("li");
-      console.log(sausage.textContent);
 
-      //ホットケーキをquerySelectorで取得しコンソールで表示
-      const hotcake = document.querySelector(".hotcake");
-      console.log(hotcake.textContent);
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>レベル2-querySelectorとquerySelectorAll</title>
+</head>
 
-      //マックグリドルソーセージをquerySelectorで取得しコンソールで表示
-      const griddle = document.querySelector(".griddle")[1];
-      console.log(griddle.textContent);
+<body>
+  <h1>朝マック</h1>
+  <ul class="morningmac">
+    <li class="muffin">ソーセージマフィン</li>
+    <li class="muffin">エッグマックマフィン</li>
+    <li class="muffin">ソーセージエッグマフィン</li>
+    <li class="muffin">チキンクリスプマフィン</li>
+    <li class="hotcake">ホットケーキ</li>
+    <li class="griddle">マックグリドルソーセージ</li>
+    <li class="griddle">マックグリドルソーセージエッグ</li>
+    <li class="griddle">マックグリドルベーコンエッグ</li>
+    <li>ベーコンエッグマックサンド</li>
+    <li>フィレオフィッシュ</li>
+  </ul>
+  <script>
+    // 例
+    // ソーセージマフィンをquerySelectorで取得しコンソールで表示
+    const sausage = document.querySelector(".morningmac li:first-child").textContent;
+    console.log(sausage);
 
-      //ソーセージエッグマフィンをquerySelectorAll("li")で取得し、コンソールで表示
-      const sausageegg = document.querySelectorAll("li")[7];
-      console.log(sausageegg.textContent);
+    //ホットケーキをquerySelectorで取得しコンソールで表示
+    const hotcake = document.querySelector(".hotcake").textContent;
+    console.log(hotcake);
 
-      //class="griddle"をquerySelectorAllで取得し、for文で全てをコンソールで表示
-    </script>
-  </body>
+
+    //マックグリドルソーセージをquerySelectorで取得しコンソールで表示
+    const griddlesausage = document.querySelector(".morningmac li:nth-last-child(5)").textContent;
+    console.log(griddlesausage);
+
+
+    //ソーセージエッグマフィンをquerySelectorAll("li")で取得し、コンソールで表示
+    const sausageegg = document.querySelectorAll("li")[2].textContent;
+    console.log(sausageegg);
+
+
+    //class="griddle"をquerySelectorAllで取得し、for文で全てをコンソールで表示
+
+    const allgriddle = document.querySelectorAll(".griddle");
+    console.log(allgriddle);
+
+    for (let i = 0; i < allgriddle.length; i++) {
+      console.log(allgriddle[i].textContent);
+    }
+  </script>
+</body>
+
 </html>

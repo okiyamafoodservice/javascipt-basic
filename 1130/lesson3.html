@@ -96,21 +96,21 @@
 
       const memberArea = document.querySelector(".fnarea");
 
-      const addmember = function (members) {
-        const addarea = docummen.createElement("ul");
+      const addMember = function (members) {
+        const addArea = document.createElement("ul");
         for (let i = 0; i < members.length; i++) {
-          const memberlist = document.createElement("li");
-          memberlist.textContent = members[i];
+          const memberList = document.createElement("li");
+          memberList.textContent = members[i];
 
           addarea.appendChild(memberlist);
         }
 
-        document.querySelector(".fnarea").appendChild(addarea);
+        document.querySelector(".fnarea").appendChild(addArea);
       };
 
       // 関数の実行
-      //   memberPush(member_list);
-      //   memberPush(mugiwara_list);
+      memberPush(member_list);
+      memberPush(mugiwara_list);
     </script>
   </body>
 </html>

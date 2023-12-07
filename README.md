@@ -11,6 +11,91 @@
 5. 10 月 26 日（木曜日）ID 取得と要素の追加 Event の追加
 6. 11 月 09 日（木曜日）if 文
 7. 11 月 16 日（木曜日）演算子
+8. 12 月 07 日(木曜日)戻り値
+
+## 12/07
+
+```js
+// 引数1と引数2を足す関数の定義（引数1=a 引数2=b)
+const addition = function (a, b) {
+  const c = a + b;
+  console.log(c);
+};
+
+//   関数の実行
+addition(30, "6");
+//   consoleに306が表示される
+
+//   戻り値のある関数の定義
+
+const addition2 = function (a, b) {
+  const c = a * b;
+  return c;
+  // 戻り値
+};
+
+//   関数の実行
+const result = addition2(5, 5);
+console.log(result);
+
+const cake = 450;
+
+const takeOut = document.querySelector(".takeOut");
+
+const eatin = document.querySelector(".eatIn");
+
+const result = document.querySelector(".taxIn");
+
+const calculation = function (cake, tax) {
+  const price = cake * tax;
+  return price;
+};
+
+takeOut.addEventListener("click", function () {
+  const totalprice = calculation(cake, 1.08);
+  result.innerHTML = Math.round(totalprice);
+});
+
+eatin.addEventListener("click", function () {
+  const totalprice = calculation(cake, 1.1);
+  result.innerHTML = Math.round(totalprice);
+});
+
+// グローバル変数の初期化※再代入可能にするためletを使う。
+let global = "グローバル変数";
+
+// 関数funcの定義
+const func = function () {
+  //ローカル変数の初期化
+  let local = "ローカル変数";
+  //グローバル変数の表示
+  console.log(global);
+  //ローカル変数の表示
+  console.log(local);
+  global = "グローバル変数を再代入";
+
+  // var global = "グローバル変数を再定義"; //varはこれができる。
+  // console.log(global);
+};
+
+if (global) {
+  var local2 = "varは関数スコープ";
+  let local3 = "letはブロックスコープ";
+}
+
+//関数funcの呼び出し
+func();
+//グローバルはvar global = "グローバル変数を再定義";で再定義されているので、undefinedになる。
+
+//グローバル変数の表示
+console.log(global);
+//ローカル変数の表示は、関数funcの中で定義されているので、呼び出せない。
+//console.log(local);
+//varは関数スコープなので、if文の外で呼び出せる。
+console.log(local2);
+//letはブロックスコープなので、if文の外で呼び出せない。
+console.log(local3);
+```
 
 ## 11/16
 

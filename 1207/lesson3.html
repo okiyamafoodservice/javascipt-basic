@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>グローバル変数</title>
+  </head>
+  <body>
+    <h1>グローバルスコープ・ローカルスコープ</h1>
+    <script>
+      //   const globalData = "hogehoge";
+      //   //   グローバル変数
+      //   const foobaa = function () {
+      //     const localData = "fugafuga";
+      //   };
+      //   //   ローカル変数
+
+      //   console.log(globalData);
+      //   console.log(localData); //エラー
+
+      const globalData = "hogehoge";
+      const foobaa = function () {
+        const globalData = "fugafuga";
+        console.log(globalData);
+      };
+
+      console.log(globalData);
+
+      //   関数の中だけでなく、{ブロック}の中でのみ有効です
+      // 　外に出したい場合はreturnを使う
+    </script>
+  </body>
+</html>

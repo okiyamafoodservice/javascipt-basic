@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="lesserafimBtn">これはボタンです</div>
+
+    <div class="mugiwaraBtn">これはボタンです</div>
+
+    <div class="fnArea">aa</div>
+
+    <script>
+      const member_list = [
+        "チェウォン",
+        "サクラ",
+        "ユンジン",
+        "カズハ",
+        "ウンチェ",
+      ];
+      const mugiwara_list = [
+        "モンキー・D・ルフィ",
+        "ナミ",
+        "ロロノア・ゾロ",
+        "ヴィンスモーク・サンジ",
+        "ウソップ",
+        "トニートニー・チョッパー",
+        "ニコ・ロビン",
+        "フランキー",
+        "ブルック",
+        "ジンベエ",
+      ];
+
+      //   .fnareaに上記の配列の要素を<li>で追加する関数
+      const memberAdd = function (member) {
+        // memberという関数を定義 memberAddで呼び出すことができる
+        const ulArea = document.createElement("ul");
+        // ulAreaという定数でul要素を作り出す
+        for (let i = 0; i < member.length; i++) {
+          const list = document.createElement("li");
+          // listという定数でli要素を作り出す
+          list.textContent = member[i];
+          // listのtextContentをmember配列のi番目にする
+          ulArea.appendChild(list);
+          // ulAreaにlist要素を追加する
+        }
+        document.querySelector(".fnArea").appendChild(ulArea);
+      };
+
+      //   memberAdd(member_list);
+      //   memberAdd(mugiwara_list);
+
+      const lesserafimBtn = document.querySelector(".lesserafimBtn");
+
+      const mugiwaraBtn = document.querySelector(".mugiwaraBtn");
+
+      lesserafimBtn.addEventListener("click", function () {
+        console.log("ルセラフィム");
+        memberAdd(member_list);
+      });
+
+      mugiwaraBtn.addEventListener("click", function () {
+        console.log("ワンピース");
+        memberAdd(mugiwara_list);
+      });
+
+      // 引数1と引数2を足す関数の定義（引数1=a 引数2=b)
+      const addition = function (a, b) {
+        const c = a + b;
+        console.log(c);
+      };
+
+      //   関数の実行
+      addition(30, "6");
+      //   consoleに306が表示される
+
+      //   戻り値のある関数の定義
+
+      const addition2 = function (a, b) {
+        const c = a * b;
+        return c;
+        // 戻り値
+      };
+
+      //   関数の実行
+      const result = addition2(5, 5);
+      console.log(result);
+    </script>
+  </body>
+</html>

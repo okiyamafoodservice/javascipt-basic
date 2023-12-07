@@ -14,6 +14,8 @@
 
     <div class="fnArea">aa</div>
 
+    <a href="#" class="btn">ボタンです</a>
+
     <script>
       const dog = document.querySelector("li");
 
@@ -93,24 +95,23 @@
       ];
 
       //   .fnareaに上記の配列の要素を<li>で追加する関数
-
-      const memberArea = document.querySelector(".fnarea");
-
-      const addMember = function (members) {
-        const addArea = document.createElement("ul");
-        for (let i = 0; i < members.length; i++) {
-          const memberList = document.createElement("li");
-          memberList.textContent = members[i];
-
-          addarea.appendChild(memberlist);
+      const memberAdd = function (member) {
+        // memberという関数を定義 memberAddで呼び出すことができる
+        const ulArea = document.createElement("ul");
+        // ulAreaという定数でul要素を作り出す
+        for (let i = 0; i < member.length; i++) {
+          const list = document.createElement("li");
+          // listという定数でli要素を作り出す
+          list.textContent = member[i];
+          // listのtextContentをmember配列のi番目にする
+          ulArea.appendChild(list);
+          // ulAreaにlist要素を追加する
         }
-
-        document.querySelector(".fnarea").appendChild(addArea);
+        document.querySelector(".fnArea").appendChild(ulArea);
       };
 
-      // 関数の実行
-      memberPush(member_list);
-      memberPush(mugiwara_list);
+      memberAdd(member_list);
+      memberAdd(mugiwara_list);
     </script>
   </body>
 </html>

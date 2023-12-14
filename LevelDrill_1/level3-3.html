@@ -59,7 +59,22 @@
       const member = document.querySelector(".member img");
       const memberSrc = member.getAttribute("src");
 
-      member.addEventListener("mouseover", function () {});
+      for (let i = 0; i < xg.length; i++) {
+        const item = xg[i];
+
+        item.addEventListener("mouseenter", function () {
+          const memberId = this.id.toLowerCase();
+          const newSrc = `https://xgalx.com/xg/assets/img/members/${memberId}.jpg`;
+
+          // 画像のソースを変更
+          member.setAttribute("src", newSrc);
+        });
+
+        item.addEventListener("mouseleave", function () {
+          // オリジナルの画像ソースに戻す
+          member.setAttribute("src", originalSrc);
+        });
+      }
     </script>
   </body>
 </html>

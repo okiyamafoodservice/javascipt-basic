@@ -1,70 +1,67 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>レベル3-ランダムで選ばれた数値を選ぶと</title>
+    <style>
+      li {
+        cursor: pointer;
+      }
+    </style>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>レベル3-ランダムで選ばれた数値を選ぶと</title>
-  <style>
-    li {
-      cursor: pointer;
-    }
-  </style>
-</head>
+  <body>
+    <h1>私の好きな食べ物は？</h1>
+    <ul class="foods">
+      <li>餃子</li>
+      <li>ハンバーグ</li>
+      <li>カレー</li>
+      <li>焼き肉</li>
+      <li>寿司</li>
+    </ul>
+    <script>
+      //下記の変数を使って、ランダムで選ばれた数値の添字をクリックすると、console.logに「当たり」と表示してください。
+      //当たり以外は「はずれ」と表示してください。
 
-<body>
-  <h1>私の好きな食べ物は？</h1>
-  <ul class="foods">
-    <li>餃子</li>
-    <li>ハンバーグ</li>
-    <li>カレー</li>
-    <li>焼き肉</li>
-    <li>寿司</li>
-  </ul>
-  <script>
-    //下記の変数を使って、ランダムで選ばれた数値の添字をクリックすると、console.logに「当たり」と表示してください。
-    //当たり以外は「はずれ」と表示してください。
+      const num = Math.floor(Math.random() * 5);
+      const foods = document.querySelectorAll(".foods li");
 
-    const num = Math.floor(Math.random() * 5);
-    const foods = document.querySelectorAll(".foods li");
+      console.log(foods);
 
-    console.log(foods);
+      // for文じゃない場合
 
-    // for文じゃない場合
+      // ランダムで選ばれた数字と配列の番号が合っていれば正解
 
+      //foods[0].addEventListener("click", function () {
+      //if (0 === num) {
+      //console.log("当たり");
+      //} else {
+      //console.log("はずれ");
+      //}
+      //});
 
-    // ランダムで選ばれた数字と配列の番号が合っていれば正解となるので
+      //foods[1].addEventListener("click", function () {
+      //if (1 === num) {
+      //console.log("当たり");
+      //} else {
+      //console.log("はずれ");
+      //}
+      //});
 
-    //foods[0].addEventListener("click", function () {
-    //if (0 === num) {
-    //console.log("当たり");
-    //} else {
-    //console.log("はずれ");
-    //}
-    //});
-
-    //foods[1].addEventListener("click", function () {
-    //if (1 === num) {
-    //console.log("当たり");
-    //} else {
-    //console.log("はずれ");
-    //}
-    //});
-
-
-
-    for (let i = 0; i < foods.length; i++) {
-      foods[i].addEventListener("click", function () {
-        if (i === num) {
-          console.log("当たり");
-        } else {
-          console.log("ハズレ");
-        }
-
-      })
-    }
-  </script>
-</body>
-
+      for (let i = 0; i < foods.length; i++) {
+        foods[i].addEventListener("click", function () {
+          if (i === num) {
+            console.log("当たり");
+          } else {
+            console.log("ハズレ");
+          }
+        });
+      }
+    </script>
+  </body>
 </html>

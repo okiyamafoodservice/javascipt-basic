@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>アロー関数</title>
+  </head>
+  <body>
+    <p>これ</p>
+    <script>
+      // 従来の関数式
+
+      const dog = function () {
+        return "わんわん";
+      };
+
+      //   関数の定義
+      function dog2() {
+        return "バウワウ";
+      }
+
+      //   関数dogを実行している
+      console.log(dog());
+      console.log(dog2());
+
+      const cat = () => {
+        return "ニャーニャー";
+      };
+      console.log(cat());
+
+      //   鳴き方を決めたい　アロー関数＋引数
+      const animal = (voice) => {
+        return voice;
+      };
+
+      console.log(animal("ミャーミャー"));
+
+      // thisは予約語なので使えない
+      const thisElm = document.querySelector("p");
+      console.log(thisElm);
+
+      //   thisElm.addEventListener("click", function () {
+      //     console.log(this.textContent);
+      //   });
+
+      thisElm.addEventListener("click", (e) => {
+        // console.log("クリック");
+        // console.log(this.textContent);
+        console.log(e.target.innerText);
+      });
+    </script>
+  </body>
+</html>

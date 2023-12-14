@@ -12,6 +12,122 @@
 6. 11 月 09 日（木曜日）if 文
 7. 11 月 16 日（木曜日）演算子
 8. 12 月 07 日(木曜日)戻り値
+9. 12 月 14 日(木曜日)callback 関数
+
+## 12/14
+
+```js
+const animalsRun = function (list) {
+  for (let i = 0; i < list.length; i++) {
+    list[i].classList.add("run");
+    list[i].style.transitionDuration = animalSpeed[i] + "s";
+  }
+
+  // 以下をfor文に変えると上になる
+  // const dog = document.querySelector(".dog span");
+  // dog.style.transitionDuration = animalSpeed[0] + "s";
+  // dog.classList.add("run");
+
+  // const cat = document.querySelector(".cat span");
+  // cat.style.transitionDuration = animalSpeed[1] + "s";
+  // cat.classList.add("run");
+
+  // const horse = document.querySelector(".horse span");
+  // horse.style.transitionDuration = animalSpeed[2] + "s";
+  // horse.classList.add("run");
+
+  // const pig = document.querySelector(".pig span");
+  // pig.style.transitionDuration = animalSpeed[3] + "s";
+  // pig.classList.add("run");
+
+  // const gorilla = document.querySelector(".gorilla span");
+  // gorilla.style.transitionDuration = animalSpeed[4] + "s";
+  // gorilla.classList.add("run");
+};
+
+startBtn.addEventListener("click", function () {
+  animalsRun(animals);
+});
+
+-callback関数;
+
+// 関数1
+const concatenateSpace = function (lastName, firstName) {
+  return lastName + " " + firstName;
+};
+// 関数2
+const useConcatenate = function (name, func) {
+  let concatName = func(name[0], name[1]);
+  console.log("結合結果：" + concatName);
+};
+
+//   関数2の実行(引数1 = 配列,引数2 =　関数名)
+
+let nameParam = ["okiyama", "naoto"];
+useConcatenate(nameParam, concatenateSpace);
+
+// 関数式1
+//   funcには関数式２が入っている
+const testFunc = function (func) {
+  console.log("testFuncが実行されました");
+  // 2秒後に動く
+  setTimeout(function () {
+    func();
+  }, 2000);
+};
+
+//   関数式2
+const callback = function () {
+  console.log("callbackが実行されました");
+};
+// 関数式1を実行している
+//   callbackは関数式２の関数名
+testFunc(callback);
+
+-アロー関数;
+
+// 従来の関数式
+
+const dog = function () {
+  return "わんわん";
+};
+
+//   関数の定義
+function dog2() {
+  return "バウワウ";
+}
+
+//   関数dogを実行している
+console.log(dog());
+console.log(dog2());
+
+const cat = () => {
+  return "ニャーニャー";
+};
+console.log(cat());
+
+//   鳴き方を決めたい　アロー関数＋引数
+const animal = (voice) => {
+  return voice;
+};
+
+console.log(animal("ミャーミャー"));
+
+// thisは予約語なので使えないので.thisElmにする
+const thisElm = document.querySelector("p");
+console.log(thisElm);
+
+//   thisElm.addEventListener("click", function () {
+//     console.log(this.textContent);
+//   });
+
+// アロー関数を使ってthisを使用する時はtargetを使う
+thisElm.addEventListener("click", (e) => {
+  // console.log("クリック");
+  // console.log(this.textContent);
+  console.log(e.target.innerText);
+});
+```
 
 ## 12/07
 

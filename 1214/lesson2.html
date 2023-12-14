@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 関数1
+      const concatenateSpace = function (lastName, firstName) {
+        return lastName + " " + firstName;
+      };
+      // 関数2
+      const useConcatenate = function (name, func) {
+        let concatName = func(name[0], name[1]);
+        console.log("結合結果：" + concatName);
+      };
+
+      //   関数2の実行(引数1 = 配列,引数2 =　関数名)
+
+      let nameParam = ["okiyama", "naoto"];
+      useConcatenate(nameParam, concatenateSpace);
+
+      // 関数式1
+      //   funcには関数式２が入っている
+      const testFunc = function (func) {
+        console.log("testFuncが実行されました");
+        // 2秒後に動く
+        setTimeout(function () {
+          func();
+        }, 2000);
+      };
+
+      //   関数式2
+      const callback = function () {
+        console.log("callbackが実行されました");
+      };
+      // 関数式1を実行している
+      //   callbackは関数式２の関数名
+      testFunc(callback);
+    </script>
+  </body>
+</html>

@@ -28,11 +28,23 @@
 
       //牛めしをquerySelectorで取得しコンソールで表示
 
+      const gyumeshi = document.querySelector(".gyumeshi .base");
+      console.log(gyumeshi.textContent);
+
       //ネギとろろ牛めしをquerySelectorで取得しコンソールで表示※nth-childを使う。
+      const negiTororo = document.querySelector(".gyumeshi li:nth-child(5)");
+      console.log(negiTororo.textContent);
 
       //ネギたっぷり旨辛ネギたま牛めしをquerySelectorAll("li")で取得し、コンソールで表示
+      const negiTappuri = document.querySelectorAll("li")[5];
+      console.log(negiTappuri.textContent);
 
       //class="negi"をquerySelectorAllで取得し、for文で全てをコンソールで表示
+
+      const negiElements = document.querySelectorAll(".gyumeshi .negi");
+      for (const negi of negiElements) {
+        console.log(negi.textContent);
+      }
     </script>
   </body>
 </html>

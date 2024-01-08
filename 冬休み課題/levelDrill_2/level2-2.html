@@ -32,6 +32,15 @@
       }
 
       //上記例を参考に、自分の好きなグループ（5人以上）のメンバーを配列にして、<ul class="favoritegroup">内にliで表示させてください。
+
+      const newJeans = ["Minji", "Hanni", "Danielle", "Haerin", "Hyein"];
+
+      const favorite = document.querySelector(".favoritegroup");
+      for (let i = 0; i < ive.length; i++) {
+        const li = document.createElement("li");
+        li.textContent = newJeans[i];
+        favorite.appendChild(li);
+      }
     </script>
   </body>
 </html>

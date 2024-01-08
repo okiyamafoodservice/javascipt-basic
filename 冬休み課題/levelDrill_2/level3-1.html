@@ -20,6 +20,16 @@
       const bigBtn = document.querySelector("button");
       const bigText = document.querySelector("span");
       let fontsize = 16;
+
+      bigBtn.addEventListener("click", () => {
+        // 文字の大きさを2px増
+        fontsize += 2;
+        if (fontsize > 30) {
+          // 30pxを超えていた場合は、文字の大きさを30px
+          fontsize = 30;
+        }
+        bigText.style.fontSize = fontsize + "px";
+      });
     </script>
   </body>
 </html>

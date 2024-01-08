@@ -35,6 +35,27 @@
 
       const numArea = document.querySelectorAll(".slot li");
       const btn = document.querySelectorAll("button");
+
+      btn[0].addEventListener("click", function () {
+        numArea[0].innerHTML = Math.floor(Math.random() * 8);
+      });
+
+      btn[1].addEventListener("click", function () {
+        numArea[1].innerHTML = Math.floor(Math.random() * 8);
+      });
+
+      btn[2].addEventListener("click", function () {
+        numArea[2].innerHTML = Math.floor(Math.random() * 8);
+      });
+
+      const checkFever = () => {
+        if (
+          numArea[0].innerHTML === numArea[1].innerHTML &&
+          numArea[0].innerHTML === numArea[2].innerHTML
+        ) {
+          console.log("フィーバー");
+        }
+      };
     </script>
   </body>
 </html>

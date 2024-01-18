@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>配列の中のオブジェクト</title>
+</head>
+<body>
+
+    <style>
+.table_gafam {
+border-collapse: collapse;
+}
+.table_gafam th {
+border: solid 1px #000;
+}
+.table_gafam td {
+border: solid 1px #000;
+}
+</style>
+<h1>GAFAMの一覧</h1>
+<table class="table_gafam">
+<tr>
+<th>名前</th><th>運営会社</th>th>創立年</th>th>URL</th>
+</tr>
+</table>
+
+<script>
+    const corporation = [
+{ name: "Google", company: "Alphabet Inc.", founding: 1998, url:
+"https://www.abc.xyz/" },
+{ name: "Apple", company: "Apple Inc.", founding: 1976, url:
+"https://www.apple.com/" },
+{ name: "Facebook", company: "Facebook, Inc.", founding: 2004,
+url: "https://www.meta.com/" },
+{ name: "Amazon", company: "Amazon.com, Inc.", founding: 1994,
+url: "https://www.amazon.com" },
+{ name: "Microsoft", company: "Microsoft Corporation", founding:
+1975, url: "https://www.microsoft.com/" }
+];
+
+    const tableElm = document.querySelector(".table_gafam");
+
+for (let co of corporation) {
+    const trElem = document.createElement("tr");
+    console.log(co);
+    tableElm.appendChild(trElem);
+
+    for (let key in co) {
+        console.log(key);
+        const tdElem = document.createElement("td");
+        //objectは順番を保証しない
+        tdElem.textContent = co[key];
+
+
+        trElem.appendChild(tdElem);
+    }
+}
+
+</script>
+
+</body>
+</html>

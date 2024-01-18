@@ -14,6 +14,103 @@
 8. 12 月 07 日(木曜日)戻り値
 9. 12 月 14 日(木曜日)callback 関数
 
+10. 1 月 18 日(木曜日) for in 文　 for of 文　 object
+
+## 1/18
+
+```js
+
+  const animals = ["dog", "cat", "bird"]; animals[2] = "lion";
+  console.log(animals); // tigerを追加する
+  animals.push("tiger");
+  console.log(animals[4]); // animalsの最初にelephantを追加する
+  animals.unshift("elephant"); console.log(animals); const fruits =
+  // document.querySelectorAll("li");
+  // console.log(fruits);
+  //  fruit.push("
+  // <li>いちご</li>");
+  //nodelistと配列は似ているが別物なのでpushは使えない。appendchildやcreateElementなどを使うしかない
+
+
+
+      const countries = {
+        Japan: "日本",
+        USA: "アメリカ",
+        China: "中国",
+        Korea: "韓国",
+      };
+
+      console.log("countries.USA");
+
+      console.log(countries["USA"]);
+
+      //   for...in 文
+
+      for (let country in countries) {
+        console.log(country + ": " + countries[country]);
+      }
+
+      //受験者名簿(オブジェクトの配列)
+      const meibo_obj = [
+        { id: "20224", name: "新井太郎" },
+        { id: "20031", name: "井上次郎" },
+        { id: "20193", name: "山本花子" },
+      ];
+
+      //   オブジェクトが３つ入っているオブジェクト
+      // 配列の要素が全て欲しい場合、
+      for (let i = 0; i < meibo_obj.length; i++) {
+        console.log(meibo_obj[i]);
+        for (let key in meibo_obj[i]) {
+          console.log(meibo_obj[i][key]);
+        }
+      }
+
+      let npbCentral_list = [
+        { team: "東京ヤクルトスワローズ", home: "東京" },
+        { team: "阪神タイガース", home: "大阪" },
+        { team: "読売ジャイアンツ", home: "東京" },
+        { team: "広島東洋カープ", home: "広島" },
+        { team: "中日ドラゴンズ", home: "名古屋" },
+        { team: "横浜DeNAベイスターズ", home: "横浜" },
+      ];
+
+
+homeの場所を取得する
+      for (let i = 0; i < npbCentral_list.length; i++) {
+        console.log(npbCentral_list[i]);
+        for (let key in npbCentral_list[i]) {
+          console.log(npbCentral_list[i]["home"]);
+        }
+      }
+
+
+ const table = document.querySelector(".table_nam");
+
+      const numbers = [
+        ["0", "ZERO"],
+        ["1", "ONE"],
+        ["2", "TWO"],
+        ["3", "THREE"],
+        ["4", "FOUR"],
+        ["5", "FIVE"],
+      ];
+
+      for (let tb of numbers) {
+        const tr = document.createElement("tr");
+
+        for (let tb_d of tb) {
+          const td = document.createElement("td");
+          td.textContent = tb_d;
+          tr.appendChild(td);
+        }
+
+        table.appendChild(tr);
+      }
+
+
+```
+
 ## 12/14
 
 ```js

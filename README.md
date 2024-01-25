@@ -15,6 +15,39 @@
 9. 12 月 14 日(木曜日)callback 関数
 
 10. 1 月 18 日(木曜日) for in 文　 for of 文　 object
+11. 1 月 25 日(木曜日) json/date
+
+## 1/25
+
+```js
+//json
+//JavaScript Object Notation
+JavaScriptをもとにつくられたデータフォーマット;
+// 日時取得
+const now = new Date();
+console.log(now);
+
+const day = ["日", "月", "火", "水", "木", "金", "土"];
+console.log(now.getDay());
+
+console.log(day[now.getDay()]);
+
+const promotionDay = new Date("2024-2-8");
+console.log(promotionDay - now);
+const difference = promotionDay - now;
+
+const seconds = difference / 1000;
+console.log(seconds);
+
+const minutes = seconds / 60;
+console.log(minutes);
+
+const hours = minutes / 60;
+console.log(hours);
+
+const days = hours / 24;
+console.log(days);
+```
 
 ## 1/18
 

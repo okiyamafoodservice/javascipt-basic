@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const now = new Date();
+      console.log(now);
+
+      const day = ["日", "月", "火", "水", "木", "金", "土"];
+      console.log(now.getDay());
+
+      console.log(day[now.getDay()]);
+
+      const promotionDay = new Date("2024-2-8");
+      console.log(promotionDay - now);
+      const difference = promotionDay - now;
+
+      const seconds = difference / 1000;
+      console.log(seconds);
+
+      const minutes = seconds / 60;
+      console.log(minutes);
+
+      const hours = minutes / 60;
+      console.log(hours);
+
+      const days = hours / 24;
+      console.log(days);
+
+      const hpday = (difference / 1000) * 60 * 60 * 24;
+    </script>
+  </body>
+</html>

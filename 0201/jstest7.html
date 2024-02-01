@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const fruitsArray = ["キウイ", "パパイヤ", "マンゴー"];
+      const listItems = document.querySelectorAll(".list li");
+      const resultBtn = document.querySelector(".resultBtn");
+      const resultList = document.querySelector(".result");
+
+      for (let i = 0; i < listItems.length; i++) {
+        listItems[i].addEventListener("click", function () {
+          const fruit = this.innerText;
+          fruitsArray.push(fruit);
+        });
+      }
+
+      resultBtn.addEventListener("click", function () {
+        resultList.innerHTML = "";
+        for (let i = 0; i < fruitsArray.length; i++) {
+          const listItem = document.createElement("li");
+          listItem.textContent = fruitsArray[i];
+          resultList.appendChild(listItem);
+        }
+      });
+    </script>
+  </body>
+</html>

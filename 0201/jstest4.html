@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- //下記のhtmlを使ってカウントするプログラムを書いてください。ただし、マイナスにはならないようにしてください。 -->
+    <div class="counter">
+      <button class="decrease">-</button>
+      <span class="count">0</span>
+      <button class="increase">+</button>
+    </div>
+
+    <script>
+      const minButton = document.querySelector(".decrease");
+      const countnum = document.querySelector(".count");
+      const maxButton = document.querySelector(".increase");
+
+      let count = 0;
+
+      minButton.addEventListener("click", function () {
+        if (count > 0) {
+          count--;
+          countnum.innerHTML = count;
+        }
+      });
+
+      maxButton.addEventListener("click", function () {
+        count++;
+        countnum.innerHTML = count;
+      });
+    </script>
+  </body>
+</html>

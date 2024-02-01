@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 下記の<li>をクリックすると、それぞれの栄養素をコンソールに表示するJavaScriptを記述してください。
+※なるべくquerySelectorAllを使ってfor文でループさせてください。 -->
+
+    <h1>三大栄養素</h1>
+    <ul>
+      <li class="protein">たんぱく質</li>
+      <li class="fats">脂質</li>
+      <li class="carbohydrate">炭水化物</li>
+    </ul>
+  </body>
+  <script>
+    const ul_inlist = document.querySelectorAll("ul li");
+
+    for (let i = 0; i < ul_inlist.length; i++) {
+      ul_inlist[i].addEventListener("click", function () {
+        console.log(ul_inlist[i].innerHTML);
+      });
+    }
+  </script>
+</html>

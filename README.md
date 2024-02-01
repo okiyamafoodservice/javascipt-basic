@@ -243,7 +243,7 @@ const animal = (voice) => {
 
 console.log(animal("ミャーミャー"));
 
-// thisは予約語なので使えないので.thisElmにする
+// thisは予約語で使えないので、thisElmにする
 const thisElm = document.querySelector("p");
 console.log(thisElm);
 

@@ -31,6 +31,12 @@
         li.textContent = objectsArray[i].name;
         ul.appendChild(li);
       }
+
+      //for ofで書く場合
+
+      for (let data of objectsArray) {
+        addition = addition + data.value;
+      }
     </script>
   </body>
 </html>

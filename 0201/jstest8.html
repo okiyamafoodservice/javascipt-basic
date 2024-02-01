@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- ８．下記のプログラムをみて、各liをクリックすると関数sayによって、文章が表示される関数sayを定義してください。 -->
+    晴れ：「今日は良い天気で、気持ちが良いです。」
+    雨：「雨音が心地よく、静かな時間を楽しめます。」
+    曇り：「曇り空、穏やかな一日が待っている感じです。」
+    雪：「雪景色が美しく、雪合戦やスキーに最適です。」
+    <ul class="weather">
+      <li>晴れ</li>
+      <li>曇り</li>
+      <li>雨</li>
+      <li>雪</li>
+    </ul>
+    <p class="opinion"></p>
+
+    <script>
+      function say(weather) {
+        const opinion = document.querySelector(".opinion");
+        const messages = {
+          晴れ: "今日は良い天気で、気持ちが良いです。",
+          雨: "雨音が心地よく、静かな時間を楽しめます。",
+          曇り: "曇り空、穏やかな一日が待っている感じです。",
+          雪: "雪景色が美しく、雪合戦やスキーに最適です。",
+        };
+        opinion.textContent = messages[weather];
+      }
+
+      const weathers = document.querySelectorAll(".weather li");
+      for (let word of weathers) {
+        word.addEventListener("click", () => {
+          say(word.textContent);
+        });
+      }
+    </script>
+  </body>
+</html>

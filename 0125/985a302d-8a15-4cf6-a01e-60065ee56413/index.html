@@ -86,29 +86,12 @@
         const chiikawa = chiikawas[i];
         const crDl = document.createElement("dl");
 
-        const crDt = `<dt><span>第${chiikawas[i]["story"]}話</span>${chiikawas[i][title]}<dt>`;
+        const crDt = `<dt><span>第${chiikawas[i]["story"]}話</span>${chiikawas[i]["title"]}<dt>
+          <dd><a href="https://www.youtube.com/watch?v=${chiikawas[i]["id"]}]
+          }"><img src="./images/${chiikawas[i]["image"]}"></a></dd>`;
 
         crDl.innerHTML = crDt;
         content.appendChild(crDl);
-
-        for (let key in chiikawas[i]) {
-          console.log(chiikawas[i][key]);
-        }
-        // for (let key in chiikawa) {
-        //   console.log(chiikawa[key]);
-
-        //   const crDl = document.createElement("dl");
-
-        //   const crDt = document.createElement("dt");
-        //   crDt.textContent = key;
-        //   crDl.appendChild(crDt);
-
-        //   const crDd = document.createElement("dd");
-        //   crDd.textContent = chiikawa[key];
-        //   crDl.appendChild(crDd);
-
-        //   document.body.appendChild(crDl);
-        // }
       }
     </script>
   </body>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- ９．下記のオブジェクトuserから、例にしたがって次の情報をコンソールに表示してください。
+    ① 性別 ②名古屋市 ③誕生日を「2004年2月15日」表記で ④カフェ巡り ⑤〒460-0008
+    愛知県名古屋市中区栄1-2-3 const user = { name: "鈴木花子", age: 19, gender:
+    "女性", email: "suzukihanako@example.com", isAdmin: false, address: {
+    street: "名古屋市中区栄1-2-3", city: "名古屋市", prefecture: "愛知県",
+    zipCode: "460-0008", }, phoneNumbers: ["052-1234-5678", "070-9876-5432"],
+    hobbies: ["音楽鑑賞", "ショッピング", "カフェ巡り"], birthday: new
+    Date(2004, 0, 15), // 誕生日を YYYY, MM - 1, DD 形式で設定 accountBalance:
+    500.5, preferredLanguages: ["日本語"], subscriptionStatus: "アクティブ",
+    school: "名古屋市立高校", }; 1 ポイント -->
+
+    <script>
+      const user = {
+        name: "鈴木花子",
+        age: 19,
+        gender: "女性",
+        email: "suzukihanako@example.com",
+        isAdmin: false,
+        address: {
+          street: "名古屋市中区栄1-2-3",
+          city: "名古屋市",
+          prefecture: "愛知県",
+          zipCode: "460-0008",
+        },
+        phoneNumbers: ["052-1234-5678", "070-9876-5432"],
+        hobbies: ["音楽鑑賞", "ショッピング", "カフェ巡り"],
+        birthday: new Date(2004, 0, 15), // 誕生日を YYYY, MM - 1, DD 形式で設定
+        accountBalance: 500.5,
+        preferredLanguages: ["日本語"],
+        subscriptionStatus: "アクティブ",
+        school: "名古屋市立高校",
+      };
+
+      // ① 性別
+      console.log("性別:", user.gender);
+
+      // ② 名古屋市
+      console.log("名古屋市:", user.address.city);
+
+      // ③ 誕生日を「2004年2月15日」表記で
+      const birthday = user.birthday;
+      const formattedBirthday =
+        birthday.getFullYear() +
+        "年" +
+        (birthday.getMonth() + 1) +
+        "月" +
+        birthday.getDate() +
+        "日";
+      console.log("誕生日:", formattedBirthday);
+
+      // ④ カフェ巡り
+      console.log("趣味: カフェ巡り");
+
+      // ⑤ 〒460-0008 愛知県名古屋市中区栄1-2-3
+      console.log(
+        "住所:",
+        "〒" + user.address.zipCode,
+        user.address.prefecture + user.address.city + user.address.street
+      );
+    </script>
+  </body>
+</html>
